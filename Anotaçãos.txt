@@ -1,0 +1,20 @@
+Preencher os atributos
+java
+
+C.setCod(3);
+C.SetNome("João");
+
+Kotlin
+
+C.cod = 3
+C.nome ="João"
+
+java
+System.out.println(C.getNome);
+
+Kotlin
+println(C.nome)
+
+Activity = atividade, é quando você abre um aplicativo, que está dentro da tela
+
+SDK é a abreviação para Software Development Kit

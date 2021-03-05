@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="32dp"
+    >
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Peso:"
+        android:textSize="36sp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="24dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        android:textColor="#673AB7"
+        android:hint="Peso do usuário, ex 88.88"/>
+
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Altura:"
+        android:layout_marginTop="48dp"
+        android:textSize="36sp"
+        android:layout_marginBottom="16dp"
+
+        />
+
+    // Usar sempre a medida sp quando for letra.
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        android:textColor="#673AB7"
+        android:hint="Altura do usuário"/>
+
+
+</LinearLayout>
