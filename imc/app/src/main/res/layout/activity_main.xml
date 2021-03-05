@@ -20,6 +20,7 @@
         />
 
     <EditText
+        android:id="@+id/edit_peso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
@@ -28,18 +29,20 @@
         android:hint="Peso do usuário, ex 88.88"/>
 
 
+    // Usar sempre a medida sp quando for letra.
+
     <TextView
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Altura:"
         android:layout_marginTop="48dp"
-        android:textSize="36sp"
         android:layout_marginBottom="16dp"
+        android:text="Altura:"
+        android:textSize="36sp"
 
         />
 
-    // Usar sempre a medida sp quando for letra.
     <EditText
+        android:id="@+id/edit_altura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
@@ -47,5 +50,30 @@
         android:textColor="#673AB7"
         android:hint="Altura do usuário"/>
 
+    <Button
+        android:id="@+id/button_calcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="12dp"
+
+    />
+
+
+    <TextView
+        android:id="@+id/text_resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21"
+        android:layout_marginTop="48dp"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+
+        />
 
 </LinearLayout>
