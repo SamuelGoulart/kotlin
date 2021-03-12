@@ -11,12 +11,13 @@
     >
 
     <TextView
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Peso:"
-        android:textSize="36sp"
-        android:layout_marginBottom="16dp"
         android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/str_peso"
+        android:textColor="@color/colorLabel"
+        android:textSize="36sp"
         />
 
     <EditText
@@ -26,18 +27,20 @@
         android:inputType="numberDecimal"
         android:textSize="24sp"
         android:textColor="#673AB7"
-        android:hint="Peso do usuário, ex 88.88"/>
+        android:hint="@string/hint_peso"/>
 
 
     // Usar sempre a medida sp quando for letra.
 
     <TextView
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:layout_marginBottom="16dp"
-        android:text="Altura:"
+        android:text="@string/str_altura"
+        android:textColor="@color/colorLabel"
         android:textSize="36sp"
+
 
         />
 
@@ -48,7 +51,7 @@
         android:inputType="numberDecimal"
         android:textSize="24sp"
         android:textColor="#673AB7"
-        android:hint="Altura do usuário"/>
+        android:hint="@string/hit_altura"/>
 
     <Button
         android:id="@+id/button_calcular"
@@ -73,6 +76,8 @@
         android:textStyle="bold"
         android:layout_gravity="center"
         android:gravity="center_vertical"
+        android:textColor="@color/colorLabel"
+
 
         />
 
