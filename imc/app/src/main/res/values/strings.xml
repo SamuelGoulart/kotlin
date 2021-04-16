@@ -1,3 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <resources>
-    <string name="app_name">imc</string>
+    <string name="app_name">BMI Calcualor</string>
+
+    <string name="str_peso" >Weight</string>
+    <string name="str_altura" >Height</string>
+    <string name="hint_peso">Peso do usuário, ex 88.88</string>
+    <string name="hit_altura">Altura do usuário</string>
+
+    <string name="erro_pesso" >weight is required!</string>
+    <string name="erro_altura" >Height is required!</string>
+
 </resources>
+
