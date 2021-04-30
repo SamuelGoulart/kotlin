@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/peso"
         android:supportsRtl="true"
         android:theme="@style/Theme.IMCAPP">
-        <activity android:name=".imcActivity"></activity>
+        <activity android:name=".ResultadoImcActivity"></activity>
+        <activity android:name=".imcActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
