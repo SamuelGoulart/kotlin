@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">radioButton</string>
+    <string name="Heading">Choose a GfG course</string>
+    <string name="RadioButton1">Amazon SDE Test Series</string>
+    <string name="radioButton2">Placement 100</string>
+    <string name="radioButton3">C++ STL</string>
+    <string name="radioButton4">CS Core Subjects</string>
+    <string name="radioButton5">DSA Self paced</string>
+    <string name="submit_Button">Submit</string>
+</resources>
