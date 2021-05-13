@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">IMC - APP</string>
+    <string name="radioButtonMasculino">Masculino</string>
+    <string name="radioButtonFeminino">Feminino</string>
+
+    <string-array name="grauAtividade">
+        <item>Atividade leve</item>
+        <item>Atividade moderada</item>
+        <item>Atividade intensa</item>
+    </string-array>
+
+</resources>
