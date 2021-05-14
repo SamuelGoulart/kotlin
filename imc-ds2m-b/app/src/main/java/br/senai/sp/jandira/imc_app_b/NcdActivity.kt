@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.*
+import java.security.acl.Group
 
 class NcdActivity : AppCompatActivity() {
 
@@ -17,29 +18,44 @@ class NcdActivity : AppCompatActivity() {
 
         val buttonCalcular: Button = findViewById(R.id.button_calcular_ncd)
         val editTextPeso: EditText = findViewById(R.id.edit_Text_Peso_Ncd)
-        val editTextIdade: EditText = findViewById(R.id.edit_Text_Idade_Ncd)
-        val radioGroupSexo: RadioGroup = findViewById(R.id.radio_Group_Sexo)
+        val spinnerIdade: Spinner = findViewById(R.id.spinner_faixa_idade)
+        val spinnerAtividadeFisica: Spinner = findViewById(R.id.spinner_grau_atividade_fisica)
+        val radioButtonMasculino: RadioButton = findViewById(R.id.radio_Button_Masculino)
 
-        lateinit var radioButton: RadioButton
+        var grauAtividadeFisica: Int = 0
+        var faixaEtaria: Int = 0
+
+        buttonCalcular.setOnClickListener {
+
+            faixaEtaria = spinnerIdade.selectedItemPosition
+            grauAtividadeFisica = spinnerAtividadeFisica.selectedItemPosition
 
 
-        buttonCalcular.setOnClickListener{
-
+            //Toast.makeText(this, radioButton.text, Toast.LENGTH_SHORT).show()
 
             if (editTextPeso.text.isEmpty()) {
                 editTextPeso.error = "Você não me disse o seu peso!"
-            } else if (editTextIdade.text.isEmpty()){
-                editTextIdade.error = "Você não me disse a sua idade!"
-            } else {
 
+            } else if (faixaEtaria == 0) {
+                Toast.makeText(this, "Faixa etária de idade incorreto", Toast.LENGTH_SHORT).show()
+            } else if (grauAtividadeFisica ==0){
+                Toast.makeText(this, "Grau de atividade diárias inválida", Toast.LENGTH_SHORT).show()
+            }
+            else {
                 val intent = Intent(this, activity_resultado_ncd::class.java)
 
-                val selectedOption: Int = radioGroupSexo!!.checkedRadioButtonId
-                radioButton = findViewById(selectedOption)
-
                 intent.putExtra("pesoNcd", editTextPeso.text.toString().toDouble())
-                intent.putExtra("idade", editTextIdade.text.toString().toInt())
-                intent.putExtra("sexo", radioButton.text.toString())
+                intent.putExtra("faixaEtariaIdade", faixaEtaria)
+                intent.putExtra("grauAtividadeFisica", grauAtividadeFisica)
+
+                if (radioButtonMasculino.isChecked()){
+                    val  sexo = 'm'
+                    intent.putExtra("sexo", sexo)
+                }else{
+                    val sexo = 'f'
+                    intent.putExtra("sexo", sexo)
+                }
+
                 startActivity(intent)
             }
 
@@ -47,3 +63,4 @@ class NcdActivity : AppCompatActivity() {
 
     }
 }
+

@@ -4,15 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NcdActivity"
+    android:fillViewport="true"
     android:orientation="vertical"
-    android:fillViewport="true">
+    tools:context=".NcdActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="bottom|center_horizontal"
         android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/calculadoracalorias" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -54,32 +60,21 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Idade"
-                    android:textAppearance="@style/label_dark_form" />
-
-                <EditText
-                    android:id="@+id/edit_Text_Idade_Ncd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/edit_round_background"
-                    android:hint="Qual é a sua idade?"
-                    android:inputType="number"
-                    android:padding="12dp" />
+                    android:text="Qual o seu sexo:"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="30dp"/>
 
                 <RadioGroup
-                    android:id="@+id/radio_Group_Sexo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:checkedButton="@id/radioButtonMasculino">
+                    android:checkedButton="@id/radio_Button_Masculino"
+                    android:orientation="horizontal">
 
                     <RadioButton
-                        android:id="@+id/radioButtonMasculino"
+                        android:id="@+id/radio_Button_Masculino"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="#FFFFFF"
-                        android:enabled="true"
                         android:text="@string/radioButtonMasculino"
                         android:textColor="#FFFFFF" />
 
@@ -89,17 +84,37 @@
                         android:layout_height="wrap_content"
                         android:buttonTint="#FFFFFF"
                         android:text="@string/radioButtonFeminino"
-                        android:textColor="#FFFFFF" />
-
+                        android:textColor="#FFFFFF"
+                        android:layout_marginLeft="20dp" />
                 </RadioGroup>
 
-                <Spinner
-                    android:id="@+id/grau_atividade_fisica"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#FFFDFD"
-                    android:entries="@array/grauAtividade"
+                    android:text="Selecione sua faixa de idade!"
+                    android:textColor="#FFFF"
                     android:layout_marginTop="30dp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_faixa_idade"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#FFFFFF"
+                    android:entries="@array/spinnerFaixaIdade" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selecione o nível de atividade diárias!!"
+                    android:textColor="#FFFF"
+                    android:layout_marginTop="10dp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_grau_atividade_fisica"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#FFFDFD"
+                    android:entries="@array/spinnergrauAtividade" />
 
                 <Button
                     android:id="@+id/button_calcular_ncd"
