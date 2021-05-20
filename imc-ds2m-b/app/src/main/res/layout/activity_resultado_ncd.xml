@@ -31,7 +31,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Resultado"
+                    android:text="@string/text_view_resultado"
                     android:layout_marginTop="48dp"
                     android:textAppearance="@style/titulo"
                     android:textSize="24sp"/>
@@ -65,10 +65,9 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/text_View_idade"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Aqui "
+                    android:text="@string/text_view_necessidade_calorica_diaria_ncd"
                     android:layout_marginTop="32dp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:gravity="center"/>
@@ -79,11 +78,11 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/sexo"
+            android:id="@+id/text_view_dica"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Movimente-se ..."
+            android:text="@string/text_view_movimente_se"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@android:color/white"
             android:layout_margin="16dp"/>

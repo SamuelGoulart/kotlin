@@ -18,3 +18,21 @@ fun getDica() : List<String> {
     return dicas[dicaDoDia]
 
 }
+
+fun getDicaNcd() : List<String> {
+
+    val dicas = listOf(
+        listOf("Temperar a salada com 1 colher de sobremesa de azeite de oliva extra virgem."),
+        listOf("Para preparo das carnes, prefira grelhado, cozido, ensopado ou assado."),
+        listOf(" Evite açúcar e farinha branca."),
+        listOf("Beba 2 litros de água por dia entre as refeições."),
+        listOf("Quando sair para comer fora: Escolher pratos que acompanhem legumes e usar bebida alcoólica com moderação (intercalada com 1 copo de água)."),
+        listOf("Procure manter a \"dieta\" de segunda à sexta-feira, mas cuidado com os excessos de final de semana. Comer de “tudo”, mas cuidar com as quantidades.")
+    )
+
+    val sorteio = Random()
+    val dicaDoDia = sorteio.nextInt(dicas.size)
+
+    return dicas[dicaDoDia]
+
+}

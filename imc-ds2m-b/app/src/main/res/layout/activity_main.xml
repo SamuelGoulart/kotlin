@@ -13,14 +13,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:text="Calculadora Saudável"
+        android:text="@string/text_view_calculadora_saudavel"
         android:textAppearance="@style/titulo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="O que você deseja fazer hoje?" />
+        android:text="@string/text_view_o_que_voce_deseja_fazer_hoje" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Calcular IMC"
+                    android:text="@string/text_view_calcular_imc"
                     android:textColor="@android:color/white" />
 
             </LinearLayout>
@@ -82,7 +82,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Calcular NCD"
+                    android:text="@string/text_view_calcular_ncd"
                     android:textColor="@android:color/white" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
