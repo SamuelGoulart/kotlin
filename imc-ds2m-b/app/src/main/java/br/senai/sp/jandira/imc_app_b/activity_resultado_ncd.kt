@@ -11,6 +11,8 @@ class activity_resultado_ncd : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resultado_ncd)
 
+        title = "Resultado do NDC"
+
         val textViewNcd: TextView = findViewById(R.id.text_view_resultado_ncd)
         val textViewDica: TextView = findViewById(R.id.text_view_dica)
 
@@ -23,12 +25,10 @@ class activity_resultado_ncd : AppCompatActivity() {
 
         val resultadoNcd = ncd(tmb, grauAtividadeFisica, sexo)
 
-        val dica = getDicaNcd()
-
-        String.format("%.1f", resultadoNcd)
+        val dicaNcd = getDicaNcd()
 
         textViewNcd.text = String.format("%.1f", resultadoNcd)
-        textViewDica.text = dica[1]
+        textViewDica.text = dicaNcd[0]
 
     }
 }

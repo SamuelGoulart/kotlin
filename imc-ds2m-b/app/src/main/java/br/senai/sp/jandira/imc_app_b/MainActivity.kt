@@ -11,6 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        title = "Calcular IMC ou NDC"
+
         // ** Clique no card IMC
         val cardImc = findViewById<CardView>(R.id.card_imc)
         val cardNcd: CardView = findViewById(R.id.card_ncd)

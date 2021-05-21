@@ -15,6 +15,8 @@ class ImcActivity : AppCompatActivity() {
         val editTextPeso: EditText = findViewById(R.id.edit_text_peso)
         val editTextAltura: EditText = findViewById(R.id.edit_text_altura)
 
+        title = "Calcular IMC"
+
         buttonCalcular.setOnClickListener{
 
             if (editTextPeso.text.isEmpty()) {

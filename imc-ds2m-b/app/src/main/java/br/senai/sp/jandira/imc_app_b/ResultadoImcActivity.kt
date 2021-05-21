@@ -9,6 +9,8 @@ class ResultadoImcActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resultado_imc)
 
+        title = "Resultado IMC"
+
         // Declarar os componentes do nosso layout
         val textViewImc: TextView = findViewById(R.id.text_view_resultado_imc)
         val textViewStatus: TextView = findViewById(R.id.text_view_status_imc)

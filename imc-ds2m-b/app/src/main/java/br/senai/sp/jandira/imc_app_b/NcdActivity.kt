@@ -25,33 +25,32 @@ class NcdActivity : AppCompatActivity() {
         var grauAtividadeFisica: Int = 0
         var faixaEtaria: Int = 0
 
+        title = "Calcular NCD"
+
         buttonCalcular.setOnClickListener {
 
             faixaEtaria = spinnerIdade.selectedItemPosition
             grauAtividadeFisica = spinnerAtividadeFisica.selectedItemPosition
-
-
-            //Toast.makeText(this, radioButton.text, Toast.LENGTH_SHORT).show()
 
             if (editTextPeso.text.isEmpty()) {
                 editTextPeso.error = "Você não me disse o seu peso!"
 
             } else if (faixaEtaria == 0) {
                 Toast.makeText(this, "Faixa etária de idade incorreto", Toast.LENGTH_SHORT).show()
-            } else if (grauAtividadeFisica ==0){
-                Toast.makeText(this, "Grau de atividade diárias inválida", Toast.LENGTH_SHORT).show()
-            }
-            else {
+            } else if (grauAtividadeFisica == 0) {
+                Toast.makeText(this, "Grau de atividade diárias inválida", Toast.LENGTH_SHORT)
+                    .show()
+            } else {
                 val intent = Intent(this, activity_resultado_ncd::class.java)
 
                 intent.putExtra("pesoNcd", editTextPeso.text.toString().toDouble())
                 intent.putExtra("faixaEtariaIdade", faixaEtaria)
                 intent.putExtra("grauAtividadeFisica", grauAtividadeFisica)
 
-                if (radioButtonMasculino.isChecked()){
-                    val  sexo = 'm'
+                if (radioButtonMasculino.isChecked()) {
+                    val sexo = 'm'
                     intent.putExtra("sexo", sexo)
-                }else{
+                } else {
                     val sexo = 'f'
                     intent.putExtra("sexo", sexo)
                 }
